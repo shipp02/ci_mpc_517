@@ -39,6 +39,10 @@ experiments easy to run while catching common errors before code is merged.
   Ubuntu 24.04 and macOS Tahoe (arm64) at the time of setup. Contributors on
   another platform must use a supported Drake configuration or a future
   container-based setup.
+- **Compatibility amendment (2026-10-28):** The team is using Intel macOS, so
+  the repository instead pins Python 3.12 and Drake 1.34.0, the newest PyPI
+  wheel available for that environment. Revisit this baseline when the team
+  moves to Apple Silicon or a Linux-only setup.
 - CI will run on GitHub Actions using Linux and validate formatting, linting,
   types, tests, and package installation. It will not initially execute
   graphics-dependent or expensive simulation suites.
