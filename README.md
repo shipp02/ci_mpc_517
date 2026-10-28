@@ -26,6 +26,14 @@ uv sync --locked --all-groups
 uv run pre-commit install
 ```
 
+On macOS, force the supported Homebrew interpreter when creating the
+environment, then verify it:
+
+```bash
+uv sync --python "$(brew --prefix python@3.13)/bin/python3.13" --locked --all-groups
+uv run python -c "import sys; print(sys.executable)"
+```
+
 On a supported Drake platform, confirm the installation:
 
 ```bash
